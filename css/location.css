@@ -1,0 +1,153 @@
+/* =============================================
+   location.css — Location & Contact Page Styles
+   Bean & Brew Coffee
+   Includes: Location Section, Contact Info,
+             Map Container, Contact Form
+   ============================================= */
+
+/* =============================================
+   LOCATION SECTION WRAPPER
+   ============================================= */
+.location-section {
+  background-color: #F5E6D3;
+  padding: 70px 20px;
+  max-width: 100%;
+}
+
+.location-section .inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.location-section h2 {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  margin-bottom: 45px;
+  font-size: 36px;
+  color: #2C1A0E;
+  position: relative;
+}
+
+.location-section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #D4873A;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* =============================================
+   CONTACT CONTAINER
+   ============================================= */
+.contact-container {
+  display: flex;
+  gap: 40px;
+  background-color: #fff;
+  padding: 45px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(44, 26, 14, 0.12);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =============================================
+   CONTACT INFO (left column)
+   ============================================= */
+.contact-info {
+  width: 50%;
+}
+
+.contact-info h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 18px;
+  color: #2C1A0E;
+  font-size: 22px;
+  border-bottom: 2px solid #D4873A;
+  padding-bottom: 8px;
+}
+
+.contact-info p {
+  margin-bottom: 12px;
+  color: #4B2C20;
+  font-size: 16px;
+}
+
+.contact-info strong {
+  color: #2C1A0E;
+}
+
+/* =============================================
+   MAP
+   ============================================= */
+.map-container {
+  margin-top: 25px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(44, 26, 14, 0.15);
+}
+
+/* =============================================
+   CONTACT FORM (right column)
+   ============================================= */
+.contact-form-container {
+  width: 50%;
+}
+
+.contact-form-container h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 18px;
+  color: #2C1A0E;
+  font-size: 22px;
+  border-bottom: 2px solid #D4873A;
+  padding-bottom: 8px;
+}
+
+.contact-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form-container label {
+  font-weight: 700;
+  font-size: 14px;
+  color: #4B2C20;
+  
+  letter-spacing: 0.5px;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+  padding: 13px 16px;
+  border: 1.5px solid #C9956C;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: 'Lato', sans-serif;
+  background-color: #FDF8F2;
+  color: #2C1A0E;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form-container input:focus,
+.contact-form-container textarea:focus {
+  border-color: #D4873A;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(212, 135, 58, 0.2);
+}
+
+/* =============================================
+   RESPONSIVE — Location Page
+   ============================================= */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .contact-info,
+  .contact-form-container {
+    width: 100%;
+  }
+}

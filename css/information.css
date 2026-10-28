@@ -1,0 +1,174 @@
+/* =============================================
+   information.css — Products / Menu Page Styles
+   Bean & Brew Coffee
+   Includes: Product Grid, Cards, Popup Overlays
+   ============================================= */
+
+/* =============================================
+   PRODUCT SECTION HEADING
+   ============================================= */
+.product-section h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* =============================================
+   PRODUCT GRID & CARDS
+   ============================================= */
+.product-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #ffffff;
+  width: 320px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(44, 26, 14, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: 4px solid #D4873A;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(44, 26, 14, 0.18);
+}
+
+.card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 28px;
+  text-align: center;
+  background-color: #FDF8F2;
+}
+
+.card-body h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #2C1A0E;
+}
+
+.card-body p {
+  margin-bottom: 22px;
+  color: #7B4F3A;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.card-body .btn {
+  padding: 9px 24px;
+  font-size: 13px;
+}
+
+/* =============================================
+   POPUP OVERLAY
+   ============================================= */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(44, 26, 14, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-overlay:target {
+  display: flex;
+}
+
+.popup-content {
+  background-color: #FDF8F2;
+  padding: 35px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 520px;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(44, 26, 14, 0.3);
+  border-top: 5px solid #D4873A;
+}
+
+.popup-content h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 15px;
+  color: #2C1A0E;
+  font-size: 22px;
+}
+
+.popup-content p {
+  color: #4B2C20;
+  line-height: 1.7;
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+
+/* Price badge */
+.popup-price {
+  display: inline-block;
+  background-color: #D4873A;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  padding: 6px 20px;
+  border-radius: 30px;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(212, 135, 58, 0.35);
+}
+
+/* Ingredient / detail list */
+.popup-details {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 22px;
+  background-color: #F5E6D3;
+  border-radius: 10px;
+  padding: 14px 18px;
+}
+
+.popup-details li {
+  font-size: 14px;
+  color: #4B2C20;
+  line-height: 1.5;
+}
+
+
+.close-btn {
+  display: inline-block;
+  background-color: #D4873A;
+  color: #FDF8F2;
+  padding: 9px 22px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+  background-color: #4B2C20;
+}
+
+/* =============================================
+   RESPONSIVE — Information Page
+   ============================================= */
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    max-width: 360px;
+  }
+}
